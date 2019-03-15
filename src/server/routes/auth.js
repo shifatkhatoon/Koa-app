@@ -11,7 +11,7 @@ const router = new Router();
 router.get('/admin', async (ctx) => {
   if (!helpers.ensureAuthenticated(ctx)) {
     ctx.type = 'html';
-    ctx.body = fs.createReadStream('./src/server/views/login.html');
+    ctx.body = fs.createReadStream('views/login.html');
   } else {
     ctx.status = 404;
     ctx.body = { status: 'error' };
