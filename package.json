@@ -1,0 +1,35 @@
+{
+  "name": "koa-app",
+  "version": "1.0.0",
+  "description": "npm install -g nodemon npm install koa npm install koa-router",
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "co-body": "^6.0.0",
+    "jade": "^1.11.0",
+    "koa": "^2.7.0",
+    "knex": "^0.16.3",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-passport": "^4.1.1",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.10.1",
+    "mongel": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.8.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shifatkhatoon/Koa-app.git"
+  },
+  "author": "Shifat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shifatkhatoon/Koa-app/issues"
+  },
+  "homepage": "https://github.com/shifatkhatoon/Koa-app#readme"
+}
