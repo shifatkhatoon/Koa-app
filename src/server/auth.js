@@ -13,14 +13,14 @@ function comparePass(userPassword, databasePassword) {
 passport.serializeUser((user, done) => { done(null, user.id); });
 
 passport.deserializeUser((id, done) => {
-  return knex('users').where({id}).first()
+  return knex('user').where({id}).first()
   .then((user) => { done(null, user); })
   .catch((err) => { done(err,null); });
 });
 
 passport.use(new LocalStrategy(options, (email, password, done) => {
   console.log(email, password);
-  knex('users').where({ email }).first()
+  knex('user').where({ email }).first()
   .then((user) => {
     console.log("in use", user);
     if (!user) return done(null, false);

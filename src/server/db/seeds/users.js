@@ -1,8 +1,8 @@
 
 exports.seed = (knex, Promise) => {
-  return knex('users').del()
+  return knex('user').del()
   .then(() => {
-    return knex('users').insert({
+    return knex('user').insert({
       name: 'Admin',
       email: 'test@gmail.com',
       password: 'test'
