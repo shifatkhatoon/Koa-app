@@ -4,19 +4,21 @@ function ensureAuthenticated(context) {
   return context.isAuthenticated();
 }
 
-function ensureAdmin(context) {
+function ensureAdmin(cred) {
   return new Promise((resolve, reject) => {
-    if (context.isAuthenticated()) {
-      queries.getSingleUser(context.state.user.id)
+    if (cred) {
+      queries.getRegisteredUser(cred.email)
       .then((user) => {
-        if (user && user[0].admin) resolve(true);
-        resolve(false);
+        if (user && user[0]) {
+          resolve(true);
+        }
       })
       .catch((err) => { reject(false); });
     }
     return false;
   });
 }
+
 
 module.exports = {
   ensureAuthenticated,

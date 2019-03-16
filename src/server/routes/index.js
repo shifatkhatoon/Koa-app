@@ -8,9 +8,4 @@ router.get('/', async (ctx) => {
   };
 })
 
-router.get('/:name', async (ctx) => {
-  const { rows } = await ctx.app.pool.query('SELECT $1::text as message', [`Hello, ${ctx.params.name}!`])
-  ctx.body = rows[0].message;
-});
-
 module.exports = router;

@@ -19,8 +19,10 @@ passport.deserializeUser((id, done) => {
 });
 
 passport.use(new LocalStrategy(options, (email, password, done) => {
+  console.log(email, password);
   knex('users').where({ email }).first()
   .then((user) => {
+    console.log("in use", user);
     if (!user) return done(null, false);
     if (!comparePass(password, user.password)) {
       return done(null, false);

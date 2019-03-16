@@ -6,11 +6,13 @@ const passport = require('koa-passport');
 const indexRoutes = require('./routes/index');
 const authRoutes = require('./routes/auth');
 
-exports.DATABASE_URL = process.env.DATABASE_URL || 'postgres://localhost:5432/koa-skeleton'
-
 
 const app = new Koa();
 const PORT = process.env.PORT || 3000;
+
+// sessions
+app.keys = ['super-secret-key'];
+app.use(session(app));
 
 // body parser
 app.use(bodyParser());
