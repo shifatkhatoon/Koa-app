@@ -5,6 +5,7 @@ const passport = require('koa-passport');
 
 const indexRoutes = require('./routes/index');
 const authRoutes = require('./routes/auth');
+const categoryRoutes = require('./routes/category');
 
 
 const app = new Koa();
@@ -25,6 +26,7 @@ app.use(passport.session());
 // routes
 app.use(indexRoutes.routes());
 app.use(authRoutes.routes());
+app.use(categoryRoutes.routes());
 
 
 // server

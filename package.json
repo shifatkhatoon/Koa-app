@@ -9,7 +9,7 @@
     "jade": "^1.11.0",
     "knex": "^0.13.0",
     "koa": "^2.7.0",
-    "koa-bodyparser": "^4.2.1",
+    "koa-bodyparser": "^4.2.0",
     "koa-logger": "^3.2.0",
     "koa-passport": "^4.1.1",
     "koa-router": "^7.4.0",
